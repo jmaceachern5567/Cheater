@@ -1,0 +1,35 @@
+{
+    "name": "SCORM Cheater",
+    "version": "1.0",
+    "description": "Pass any SCO by clicking a single button.",
+    "manifest_version": 2,
+    "content_scripts": [{
+        "matches": ["https://*/*", "http://*/*"],
+        "js": ["contentScript.js"]
+    }],
+    "permissions": [
+        "declarativeContent",
+        "storage",
+        "tabs",
+        "notifications",
+        "http://*/",
+        "https://*/",
+        "activeTab"
+    ],
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/the_cheat.png",
+            "32": "images/the_cheat.png",
+            "48": "images/the_cheat.png",
+            "128": "images/the_cheat.png"
+        }
+    },
+    "icons": {
+        "16": "images/the_cheat.png",
+        "32": "images/the_cheat.png",
+        "48": "images/the_cheat.png",
+        "128": "images/the_cheat.png"
+    },
+    "web_accessible_resources" : ["cheater.js"]
+}
